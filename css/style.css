@@ -1,3 +1,6 @@
 body {
-    background-image: url(https://www.planetware.com/wpimages/2019/08/california-best-national-parks-yosemite-national-park.jpg); 
+    background: url(/myImages/CA-nature-backgroundimg.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }

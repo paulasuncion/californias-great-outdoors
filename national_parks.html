@@ -5,8 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script src="scripts/nationalParkData.js"></script>
+    <script src="scripts/parkTypeData.js"></script>
 </head>
 <body>
-    
+    <select id="countriesDropDown">
+        <!-- <option value="australia">Australia</option> -->
+        </select>
+        
+        <script>
+        
+        //Declare object
+        const countriesData = {
+          "Australia": "",
+          "Canada": "",
+          "UK": "",
+          "USA": ""
+        }
+        //Selecting the dropdown
+        const countriesDropDown = document.getElementById("countriesDropDown");
+        
+        for (let key in countriesData) {
+          let option = document.createElement("option");
+          option.setAttribute('value', key);
+        
+          let optionText = document.createTextNode(key);
+          option.appendChild(optionText);
+        
+          countriesDropDown.appendChild(option);
+        }
+        </script>
 </body>
 </html>

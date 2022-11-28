@@ -7,39 +7,11 @@
     <title>California's Outdoor Attractions</title>
 
     <!--linking css and javascript sheets-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="scripts/scripts.js"></script>
 
 </head>
 <body>
-    <p>This is the start of my capstone JS project.</p>
-
-    <select id="countriesDropDown">
-        <!-- <option value="australia">Australia</option> -->
-        </select>
-        
-        <script>
-        
-        //Declare object
-        const countriesData = {
-          "Australia": "",
-          "Canada": "",
-          "UK": "",
-          "USA": ""
-        }
-        //Selecting the dropdown
-        const countriesDropDown = document.getElementById("countriesDropDown");
-        
-        for (let key in countriesData) {
-          let option = document.createElement("option");
-          option.setAttribute('value', key);
-        
-          let optionText = document.createTextNode(key);
-          option.appendChild(optionText);
-        
-          countriesDropDown.appendChild(option);
-        }
-        </script>
-    
+    <p id="centerText">California's Outdoors</p>  
 </body>
 </html>
