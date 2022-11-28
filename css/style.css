@@ -4,3 +4,16 @@ body {
     background-size: cover;
     
 }
+
+#centerText {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.mainButtons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
