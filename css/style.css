@@ -1,5 +1,13 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 body {
-    background: url(/myImages/CA-nature-backgroundimg.jpg); 
+    background: url(https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -8,12 +16,42 @@ body {
 #centerText {
     display: flex;
     justify-content: center;
-    
+    margin: auto;
+    font-size: 100px;
+
 }
 
 .mainButtons {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
+}
 
+.mainContent {
+    margin: auto;
+    padding-top: 400px;
+    padding-bottom: 200px;
+    position: relative;
+}
+
+.parksButton {
+    cursor: pointer;
+    border: 4px solid black;
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    color: black;
+    font-size: 1.5em;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+}
+
+.mountainButton {
+    cursor: pointer;
+    border: 4px solid black;
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    color: black;
+    font-size: 1.5em;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
 }
