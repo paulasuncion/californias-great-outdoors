@@ -6,12 +6,29 @@ html, body {
     overflow-x: hidden;
 }
 
-.indexPage {
-    background: url(https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    color: black;
 }
+
+.nav-links a {
+    color: black;
+}
+
+.logo {
+    font-size: 32px;
+}
+
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
 
 .mountainPage {
     background-color: #888;
@@ -20,9 +37,8 @@ html, body {
 #centerText {
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin-bottom: 40px;
     font-size: 100px;
-
 }
 
 .mainButtons {
@@ -33,9 +49,11 @@ html, body {
 
 .mainContent {
     margin: auto;
-    padding-top: 400px;
-    padding-bottom: 200px;
-    position: relative;
+    padding-top: 10px;
+    padding-bottom: 345px;
+    background: url(https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .parksButton {
