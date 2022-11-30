@@ -6,7 +6,7 @@ html, body {
     overflow-x: hidden;
 }
 
-body {
+.indexPage {
     background: url(https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,3 +55,50 @@ body {
     font-size: 1.5em;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .mountain-title {
+    text-align: center;
+    font-weight: normal;
+    font-size: 2.6rem;
+  }
+  
+  .mountain {
+    max-width: 500px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .mountain h4 {
+    margin: 0 0 6px 0;
+  }
+  
+  .mountain-photo {
+    float: top;
+    width: 40%;
+    margin-right: 15px;
+  }
+  
+  .mountain-name {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0 0 1rem 0;
+  }
+  
+  .mountain-desc {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0 0 1rem 0;
+  }
+  .elevation {
+    font-size: 0.9rem;
+    color: #888;
+    vertical-align: middle;
+  }

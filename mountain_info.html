@@ -6,40 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mountain Information</title>
 
+    <script src="scripts/mountainData.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
     
 </head>
 <body>
-    
+
+  <header>
+    <nav>
+
+    </nav>
+  </header>
+
+    <main>
+      <div id="mountainDiv"></div>
+    </main>
+
+
+    <script>
+
+      function mountainTemplate(mountain) {
+    return `
+      <div class="mountain">
+      <h2 class="mountain-name">${mountain.name} <br> <span class="elevation">(${mountain.elevation} feet)</span></h2>
+      <img class="mountain-photo" src="images/${mountain.img}">
+      <h4 class="mountain-desc">${mountain.desc} </h4>
+      <p><strong>Effort:</strong> ${mountain.effort}</p>
+      <strong>Coordinates:</strong> lat: ${mountain.coords.lat} lng: ${mountain.coords.lng}
+    </div>
+  `
+  }
   
-    <select id="countriesDropDown">
-        <!-- <option value="australia">Australia</option> -->
-        </select>
-        
-        <script>
-        
-        //Declare object
-        const countriesData = {
-          "Australia": "",
-          "Canada": "",
-          "UK": "",
-          "USA": ""
-        }
-        //Selecting the dropdown
-        const countriesDropDown = document.getElementById("countriesDropDown");
-        
-        for (let key in countriesData) {
-          let option = document.createElement("option");
-          option.setAttribute('value', key);
-        
-          let optionText = document.createTextNode(key);
-          option.appendChild(optionText);
-        
-          countriesDropDown.appendChild(option);
-        }
-        </script>
-     
-     <div id="mountainDiv"></div>
-   
+    document.getElementById("mountainDiv").innerHTML = `
+    <h1 class = "mountain-title">Mountains (${mountainsArray.length} results)</h1>
+    ${mountainsArray.map(mountainTemplate).join('')}
+    <p class = "footer">These ${mountainsArray.length} mountains were added recently.</p>
+`
+    </script>
 
 </body>
 </html>
