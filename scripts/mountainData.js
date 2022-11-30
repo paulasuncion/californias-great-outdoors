@@ -529,4 +529,18 @@ const mountainsArray = [
     }
 ]
 
-    
+//Steps in creating a function:
+
+//1st Declare variables
+
+//2nd Algorithm/Calculations
+
+//3rd Output
+
+document.getElementById("mountainDiv").innerHTML = `
+<h1 class = "mountain-title">Mountains (${mountainsArray.length} results)</h1>
+${mountainsArray.map(function() {
+    return 'hello'
+}).join('')}
+<p class = "footer">These ${mountainsArray.length} mountains were added recently.</p>
+`
