@@ -9,7 +9,7 @@ html, body {
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px;
     background-color: white;
     color: black;
@@ -17,10 +17,6 @@ html, body {
 
 .nav-links a {
     color: black;
-}
-
-.logo {
-    font-size: 32px;
 }
 
 .menu {
