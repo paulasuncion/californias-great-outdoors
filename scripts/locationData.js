@@ -1,4 +1,5 @@
 const locationsArray = [
+    "Select State",
     "Alabama",
     "Alaska",
     "American Samoa",
@@ -53,5 +54,6 @@ const locationsArray = [
     "Washington",
     "West Virginia",
     "Wisconsin",
-    "Wyoming"
+    "Wyoming",
+    
 ]

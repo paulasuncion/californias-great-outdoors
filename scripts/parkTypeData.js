@@ -1,4 +1,5 @@
 const parkTypesArray = [
+    "Select Park",
     "National Park",
     "National Monument",
     "Recreation Area",
@@ -11,5 +12,6 @@ const parkTypesArray = [
     "River",
     "Seashore",
     "Trail",
-    "Parkway"
+    "Parkway",
+    
 ]

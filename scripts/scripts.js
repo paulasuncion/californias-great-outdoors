@@ -1,12 +1,3 @@
-window.onload = function LoadData() {
-
-    initStatesDropdown();
-    initParkDropDown();
-    document.getElementById("searchButton").addEventListener("click", runSearch);
-  
-
-};
-
 function initStatesDropdown() {
     // load the dropdown list with Location Data
     const parkLocationList = document.getElementById("parkLocationList");
@@ -26,39 +17,61 @@ function initStatesDropdown() {
 
 function initParkDropDown() {
 
- // load the dropdown list with Location Data
     const parkTypeData = document.getElementById("parkTypeData");
     let length2 = parkTypesArray.length;
 
     for (let i = 0; i < length2; i++) {
-    // create the option element
     let theOption2 = document.createElement("option");
-    // set the text and value of the option you created
     theOption2.textContent = parkTypesArray[i];
     theOption2.value = parkTypesArray[i];
-    // append the option as a child of (inside) the
-    // select element
-    parkTypeData.appendChild(theOption2); //Adding to the dropdown
+    parkTypeData.appendChild(theOption2); 
     }
+
 }
 
+//Calling the park dropdown functions
+window.onload = function LoadData() {
+
+    initStatesDropdown();
+    const parkLocationList = document.getElementById("parkLocationList");
+    parkLocationList.value = "Select State";
+
+    initParkDropDown();
+    const parkTypeData = document.getElementById("parkTypeData");
+    parkTypeData.value = "Select Park";
+
+    document.getElementById("parkSearchButton").addEventListener("click", runSearch);
+    document.getElementById("locationSearchButton").addEventListener("click", runSearch);
+};
+
+//Run the search
 function runSearch()
 {
    //Select the selected value from the park
     const parkLocationList = document.getElementById("parkLocationList");
-    const selectedValue = parkLocationList.value;
+    const selectedLocation = parkLocationList.value;
     
-//Select the selected value from the park
     const parkTypeData = document.getElementById("parkTypeData");
-    const selectedPark = parkTypeData.value
-    alert(selectedValue + " - " + selectedPark);
-
+    const selectedPark = parkTypeData.value;
 }
 
-function filterArray () {
-    const result = mountainsArray.filter(mountain => mountain.name = "Mt. Washington");
-    alert(result);
+function runSelectedParkType () {
+    let selectedParkType= document.getElementById("parkTypeData").value;
+    document.getElementById("parkType").innerHTML = "You selected: " + selectedParkType;
 }
+
+function runSelectedParkLocation () {
+    let selectedParkLocation = document.getElementById("parkLocationList").value;
+    document.getElementById("parkLocation").innerHTML = "You selected: " + selectedParkLocation;
+}
+
+
+
+
+//Mountain Page JS
+
+//Write mountain dropdown menu code here
+
 
 function mountainTemplate(mountain) {
     return `
@@ -71,9 +84,36 @@ function mountainTemplate(mountain) {
     </div>
     </div>
   `
-  }
+  };
+
+//Call functions here
   
+
+//Next steps:
+//Save the selected option of dropdown into a variable
+//Loop over all the mountain data
+//if Mountain name is equal to selected option
+//display mountain on screen
+
+  function displayMountain() {
+
+    let mydropdown = document.getElementById("mountainList");
+    let selectedValue = mydropdown.text;
+    let selectedOption = "Mt. Adams";
+    
+    const avengers = mountainsArray.filter(mountain => mountain.name === selectedOption);
+  };
+
+
     document.getElementById("mountainDiv").innerHTML = `
     <h1 class = "mountain-title">${mountainsArray.length} mountains to climb in CA</h1>
     ${mountainsArray.map(mountainTemplate).join('')}
-`
+`;
+
+
+// function filterArray () {
+//     const result = mountainsArray.filter(mountain => mountain.name = "Mt. Washington");
+//     alert(result);
+// }
+
+

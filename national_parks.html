@@ -25,16 +25,39 @@
     </nav>
   </header>
 
-    <select id="searchBy" name="genreSearch">
-      <option value="searchByCategory">Search By..</option>
+  
+    <!-- <select id="searchBy" name="genreSearch">
+      <option value="searchByCategory" selected>Search By..</option>
       <option value="parkType">Park Type</option>
       <option value="location">By State</option>
       <option value="allParks">View All National Parks</option>
-    </select>
-    <select id="parkLocationList" name="stateParkLocations"></select> 
+    </select> -->
+
+    <select id="parkLocationList" name="stateParkLocations"></select>
+    <button id="locationSearchButton" onclick="runSelectedParkLocation()">Search Park</button>
+
     <select id="parkTypeData" name="parkTypes"></select>
-    <button id="searchButton">Search Park</button>
-  
+    <button id="parkSearchButton" onclick="runSelectedParkType()">Search Park</button>
+ 
+
+  <p id="parkType"></p>
+  <p id="parkLocation"></p>
+
+  <!-- <script>
+    const form = document.querySelector('form');
+    
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      const obj = Object.fromEntries(fd);
+
+      const json = JSON.stringify(obj);
+      localStorage.setItem('form', json);
+
+      window.location.href = 
+    })
+  </script> -->
+
 <footer>
   <script src="scripts/locationData.js"></script>
   <script src="scripts/nationalParkData.js"></script>

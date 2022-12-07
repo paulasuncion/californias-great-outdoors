@@ -6,12 +6,45 @@ html, body {
     overflow-x: hidden;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+li, a, .menu {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  text-decoration: none;
+  list-style: none;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10%;
+  
+}
+
+.nav-links a {
+    color: black;
+    list-style: none;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.menu {
+    display: flex;
+    gap: 3em;
+}
+
 .homePage {
   background: url(https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    width: 100%;
 }
 
 .mtnPage {
@@ -20,6 +53,7 @@ html, body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    width: 100%;
 }
 
 .parkPage {
@@ -28,25 +62,9 @@ html, body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: white;
-    color: black;
+    width: 100%;
 }
 
-.nav-links a {
-    color: black;
-}
-
-.menu {
-    display: flex;
-    gap: 1em;
-    font-size: 18px;
-}
 
 
 .mountainPage {
@@ -169,3 +187,12 @@ img {
     font-size: 1rem;
   }
  
+  #parkType {
+    color: black;
+    font-size: 50px;
+  }
+
+  #parkLocation {
+    color:#888;
+    font-size: 60px;
+  }
