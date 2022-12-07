@@ -74,8 +74,9 @@ function runSelectedParkLocation () {
 
 
 function mountainTemplate(mountain) {
+  let id = mountain.name.replace(" ", "").replace(".","")
     return `
-      <div class="mountain">
+      <div id = "${id}" class="mountain">
       <h2 class="mountain-name">${mountain.name} <span class="elevation">(${mountain.elevation} feet)</span></h2>
       <img class="mountain-photo" src="images/${mountain.img}">
       <h4 class="mountain-desc">${mountain.desc}</h4>
@@ -111,9 +112,37 @@ function mountainTemplate(mountain) {
 `;
 
 
-// function filterArray () {
-//     const result = mountainsArray.filter(mountain => mountain.name = "Mt. Washington");
-//     alert(result);
-// }
+function loadData() {
+  var down = document.getElementById('mountain');
+         for (let i = 0; i < mountainsArray.length; i++) {
+             var optn = mountainsArray[i];
+             var el = document.createElement("option");
+             el.textContent = optn;
+             el.value = optn;
+             down.appendChild(el);
+         }
+         down.innerHTML = "Elements Added";
+     }
+
+     var myArray = new Array("Mt. Washington","Mt. Jefferson","Mt. Monroe","Mt. Madison","Mt. Lafayette","Mt. Lincoln",
+     "South Twin","Carter Dome","Mt. Moosilauke","Mt. Eisenhower","North Twin","Mt. Carrigain","Mt. Bond","Middle Carter","West Bond",
+     "Mt. Garfield","Mt. Liberty","South Carter","Wildcat Mountain","Mt. Hancock","South Kinsman","Mt. Field","Mt. Osceola","Mt. Flume",
+     "South Hancock","Mt. Pierce","North Kinsman","Mt. Willey","Zealand Mountain","North Tripyramid","East Osceola","Middle Tripyramid",
+     "Cannon Mountain","Wildcat D","Mt. Hale","Mt. Jackson","Mt. Tom","Mt. Moriah","Mt. Passaconaway","Owl's Head","Galehead Mountain",
+     "Mt. Whiteface","Mt. Waumbek","Mt. Isolation","Mt. Tecumseh",
+     );
+
+     
+var dropdown = document.getElementById("selectMountain");
 
 
+for (var i = 0; i < myArray.length; ++i) {
+    
+    dropdown[dropdown.length] = new Option(myArray[i], myArray[i]);
+}
+
+function listMountain() {
+ let dropValue = document.getElementById("selectMountain").value;
+ let id = dropValue.replace(" ", "").replace(".","")
+ document.getElementById(id).scrollIntoView()
+}
