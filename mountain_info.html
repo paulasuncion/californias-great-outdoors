@@ -27,29 +27,21 @@
       </section>
     </nav>
   </header>
-  
-      <form id="mountainForm">
-        <select id="selectMountain" onchange="listMountain()">
-          <option>Choose a mountain</option>  
-        </select>
-      </form>
 
     <main>
+      <div class="mountainDropdown">
+      <select id="mountainsListDropdown" class="mountainDropdownSelect"></select>
+      <button id="searchButton" onclick="loadData();" class="mountainDropdownButton">Search Mountain</button>
+      </div>
+
       <div id="mountainDiv"></div>
       <div id="mountain"></div>
-
-      <!-- <button onclick="loadData();">
-        click here
-    </button> -->
-
+      <div id=""></div>
     </main>
-
-    
-    
 
 <footer>
   <script src="scripts/mountainData.js"></script>
-  <script src="scripts/scripts.js"></script>
+  <script src="scripts/mountainScript.js"></script>
 </footer>
 </body>
 </html>

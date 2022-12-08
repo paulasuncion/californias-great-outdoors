@@ -65,12 +65,31 @@ function runSelectedParkLocation () {
     document.getElementById("parkLocation").innerHTML = "You selected: " + selectedParkLocation;
 }
 
+//Display park object
+function parkTemplate(park) {
+  let id = park.name.replace(" ", "").replace(".","")
+    return `
+      <div id = ${id} class="park">
+      <h4 class="parkLocationID">${park.LocationID}</h4>
+      <h2 class="parkLocationName">${park.LocationName}</h2>
+      <h2 class="parkAddress">${park.Address},${park.City}, ${park.State}, ${park.ZipCode}</h2>
+      <h2 class="parkPhone">${park.Phone}</h2>
+      <h2 class="parkFax">${park.Fax}</h2>
+      <h4 class="parkLatLong">${park.Latitude}, ${park.Longitude}</h4>
+      <h4 class="parkLocation">${park.Location.coordinates}</h4>
+      <h4 class="parkLocationType">${park.Location.type}</h4>
+      </div>
+    `
+  };
 
+
+ // <h2 class="parkCity">${park.City}</h2>
+      // <h2 class="parkState">${park.State}</h2>
+      // <h2 class="parkZipCode">${park.ZipCode}</h2>
+   //<h4 class="parkLongitude"></h4>
 
 
 //Mountain Page JS
-
-//Write mountain dropdown menu code here
 
 
 function mountainTemplate(mountain) {
@@ -82,7 +101,6 @@ function mountainTemplate(mountain) {
       <h4 class="mountain-desc">${mountain.desc}</h4>
       <p class="mountain-effort-coordinates"><strong>Effort:&nbsp</strong> ${mountain.effort} &nbsp
       <strong>Coordinates:&nbsp</strong> lat: ${mountain.coords.lat} lng: ${mountain.coords.lng} </p>
-    </div>
     </div>
   `
   };
@@ -96,14 +114,7 @@ function mountainTemplate(mountain) {
 //if Mountain name is equal to selected option
 //display mountain on screen
 
-  function displayMountain() {
 
-    let mydropdown = document.getElementById("mountainList");
-    let selectedValue = mydropdown.text;
-    let selectedOption = "Mt. Adams";
-    
-    const avengers = mountainsArray.filter(mountain => mountain.name === selectedOption);
-  };
 
 
     document.getElementById("mountainDiv").innerHTML = `
