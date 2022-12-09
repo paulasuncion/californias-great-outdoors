@@ -89,7 +89,37 @@ function parkTemplate(park) {
    //<h4 class="parkLongitude"></h4>
 
 
-//Mountain Page JS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   //Mountain Page JS
 
 
 function mountainTemplate(mountain) {

@@ -56,12 +56,10 @@ function runSearch() {
 //Select the selected value from the mountains list
     const selectedMountainFromDropdown = document.getElementById("mountainsListDropdown").value;
     
-
 //filter the array based on the selected value from dropdown
     const filterMountains = mountainsArray.filter(mountain => mountain.name == selectedMountainFromDropdown);
     
 //run the mountain data again with the filtered array as an input
     document.getElementById("mountainDiv").innerHTML = `
-    ${filterMountains.map(mountainTemplate).join("")}
-`;  
+    ${filterMountains.map(mountainTemplate).join("")}`;  
 }
