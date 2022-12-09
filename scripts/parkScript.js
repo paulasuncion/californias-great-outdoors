@@ -1,3 +1,4 @@
+//Calling all functions
 window.onload = function LoadData() {
 
     initStatesDropdown();
@@ -7,56 +8,71 @@ window.onload = function LoadData() {
 
 };
 
+//Create the dropdown menu for location list
 function initStatesDropdown() {
+
     // load the dropdown list with Location Data
     const parkLocationList = document.getElementById("parkLocationList");
     let amountOfStates = locationsArray.length;
-   
+
+    //looped to get all values from array
     for (let i = 0; i < amountOfStates; i++) {
-    // create the option element
+
+    //create the option element
     let theOption = document.createElement("option");
-    // set the text and value of the option you created
+
+    //set the text and value of the option you created
     theOption.textContent = locationsArray[i];
     theOption.value = locationsArray[i];
-    // append the option as a child of (inside) the
-    // select element
+
+    //append the option as a child of (inside) the select element
     parkLocationList.appendChild(theOption); //Adding to the dropdown
     }
 }
-
+//Create the dropdown menu for park data type list
 function initParkDropDown() {
 
+    //load the dropdown list with Location Data
     const parkTypeData = document.getElementById("parkTypeList");
     let length2 = parkTypesArray.length;
 
+    //looped to get all values from array
     for (let i = 0; i < length2; i++) {
+
+    //create the option element
     let theOption2 = document.createElement("option");
+
+    //set the text and value of the option you created
     theOption2.textContent = parkTypesArray[i];
     theOption2.value = parkTypesArray[i];
+
+    //append the option as a child of (inside) the select element
     parkTypeData.appendChild(theOption2); 
     }
 
 }
 
+//Display all individual array object values
 function parkTemplate(park) {
       return `
         <div class="park">
-        <h4 class="parkLocationID">${park.LocationID}</h4>
-        <h2 class="parkLocationName">${park.LocationName}</h2>
+        <h1 class="parkLocationName">${park.LocationName}<br>
+        <small><i>(${park.LocationID})</i></small></h1>
         <h2 class="parkAddress">${park.Address}<br>${park.City}, ${park.State} ${park.ZipCode}</h2>
-        <h2 class="parkPhoneFax">Phone #: ${park.Phone} Fax #: ${park.Fax}</h2>
-        <h4 class="parkLatLong">Lat: ${park.Latitude} Long: ${park.Longitude}</h4>
-        <h4 class="parkLocation">Coordinates: ${park.Location.coordinates}</h4>
-        <h4 class="parkLocationType">Type: ${park.Location.type}</h4>
+        <h3 class="parkPhoneFax">Phone #: ${park.Phone} <br> Fax #: ${park.Fax}</h3>
+        <h3 class="parkLatLong">Lat: ${park.Latitude} Long: ${park.Longitude}</h3>
+        <h3 class="parkLocation">Coordinates: ${park.Location.coordinates}</h3>
+        <h2 class="parkLocationType">Type: ${park.Location.type}</h2>
         </div>
       `
     };
 
+    //display all values from array onto html
     document.getElementById("parkDiv").innerHTML = `
-    <h1 class = "park-title">${nationalParksArray.length} parks to explore</h1>
     ${nationalParksArray.map(parkTemplate).join('')}
 `;
 
+//Load data from array when user selects a value
 function loadData() {
     var down = document.getElementById('park');
             for (let i = 0; i < nationalParksArray.length; i++) {
@@ -69,17 +85,28 @@ function loadData() {
             down.innerHTML = "";
         }
 
-
+//Running the search after user selects value from dropdown menu
 function runStateSearch() {
 
+    //select the selected value from the park state location list
     const selectedStateFromDropdown = document.getElementById("parkLocationList").value;
+
+    //filter the array based on the selected value from dropdown
     const filterStates = nationalParksArray.filter(park => park.State == selectedStateFromDropdown);
+
+    //run the park data again with the filtered array as an input
     document.getElementById("parkDiv").innerHTML = `${filterStates.map(parkTemplate).join("")}`;
 }
 
+//Running the search after user selects value from dropdown menu
 function runParkTypeSearch() {
 
+    //select the selected value from the park state location list
     const selectedParkTypeFromDropdown = document.getElementById("parkTypeList").value;
-    const filterParkTypes = nationalParksArray.filter(park => park.LocationName == selectedParkTypeFromDropdown);
+    
+    //filter the array based on the selected value from dropdown
+    const filterParkTypes = nationalParksArray.filter(park => park.LocationName.search(selectedParkTypeFromDropdown) != -1);
+    
+    //run the park data again with the filtered array as an input
     document.getElementById("parkDiv").innerHTML = `${filterParkTypes.map(parkTemplate).join("")}`;
 }

@@ -4,44 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mountain Information</title>
+    <title>Exploring Mountains</title>
 
+    <!--Stylesheet references-->
     <link rel="stylesheet" href="css/style.css">
-    
     
 </head>
 <body class="mountainPage">
 
-  <header>
-    <nav>
-      <section>
-        <nav class="navbar">
-             <ul class="nav-links">  
-              <div class="menu">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="mountain_info.html">Mountains</a></li>
-                  <li><a href="national_parks.html">National Parks</a></li>
-              </div>
-            </ul>
-        </nav>
-      </section>
-    </nav>
-  </header>
+  <!--Navigation bar-->
+  <section>
+    <header>
+      <nav class="navbar">
+          <ul class="nav-links">  
+            <div class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mountain_info.html">Mountains</a></li>
+                <li><a href="national_parks.html">National Parks</a></li>
+            </div>
+          </ul>
+      </nav>
+    </header>
+  </section>
 
     <main>
+      
+      <!--Background video-->
+      <video id="mountainVideo" autoplay loop muted>
+        <source src="videos/mountainVideo.mp4" type="video/mp4">
+      </video>
+
+      <p class="mountainText">Check out the list of many mountains to explore!</p>
+
+      <!--Dropdown menu code for HTML-->
       <div class="mountainDropdown">
       <select id="mountainsListDropdown" class="mountainDropdownSelect"></select>
       <button id="searchButton" onclick="loadData();" class="mountainDropdownButton">Search Mountain</button>
       </div>
 
+      <!--View all button that refreshes the page-->
+      <div class="viewAllMountains">
+        <a href="mountain_info.html"><button type="button" class="viewAllButton">View All Parks</button></a>
+      </div>
+
+      <!--Necessary dividers for JavaScript DOM work-->
       <div id="mountainDiv"></div>
       <div id="mountain"></div>
       <div id=""></div>
+
     </main>
 
-<footer>
-  <script src="scripts/mountainData.js"></script>
-  <script src="scripts/mountainScript.js"></script>
-</footer>
+  <!--Footer that contains links to my JavaScript files-->
+  <footer>
+    <script src="scripts/mountainData.js"></script>
+    <script src="scripts/mountainScript.js"></script>
+  </footer>
+
 </body>
 </html>

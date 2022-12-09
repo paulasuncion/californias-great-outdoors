@@ -6,41 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Parks</title>
 
+    <!--Stylesheet references-->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-  <header>
-    <nav>
-      <section>
-        <nav class="navbar">
-             <ul class="nav-links">  
-              <div class="menu">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="mountain_info.html">Mountains</a></li>
-                  <li><a href="national_parks.html">National Parks</a></li>
-              </div>
-            </ul>
-        </nav>
-      </section>
-    </nav>
-  </header>
-    <main>
-      <div class="container">
-          <select id="parkLocationList"></select>
-          <button id="stateSearchButton">Search State</button>
 
-          <select id="parkTypeList"></select> 
-          <button id="parkTypeSearchButton">Search Park Type</button>
-      </div>
-      <div id="parkDiv"></div>
-      <div id="park"></div>
+  <!--Navigation bar-->
+  <section>
+    <header>
+      <nav class="navbar">
+          <ul class="nav-links">  
+            <div class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mountain_info.html">Mountains</a></li>
+                <li><a href="national_parks.html">National Parks</a></li>
+            </div>
+          </ul>
+      </nav>
+    </header>
+  </section>
+
+  <main>
+
+    <!--Background video-->
+    <video id="parkVideo" autoplay loop muted>
+      <source src="/videos/pexels-rodnae-productions-8552242.mp4" type="video/mp4">
+    </video>
+
+    <p class="parkText">Check out the list of many National Parks to explore!</p>
+    
+    
+    <div class="locationDiv">
+        <select id="parkLocationList" class="locationSelect"></select>
+        <button id="stateSearchButton" class="locationButton">Search State</button>
+    </div>
+    <div class="typeDiv">
+        <select id="parkTypeList" class="typeSelect"></select> 
+        <button id="parkTypeSearchButton" class="typeButton">Search Park Type</button>
+    </div>
+  
+    <!--View all button that refreshes the page-->
+    <div class="viewAllParks">
+    <a href="national_parks.html"><button type="button" class="viewAllButton">View All Parks</button></a>
+    </div>
+
+    <!--Necessary dividers for JavaScript DOM work-->
+    <div id="parkDiv"></div>
+    <div id="park"></div>
+
   </main>
 
+  <!--Footer that contains links to my JavaScript files-->
   <footer>
     <script src="scripts/locationData.js"></script>
     <script src="scripts/nationalParkData.js"></script>
     <script src="scripts/parkTypeData.js"></script>
     <script src="scripts/parkScript.js"></script>
   </footer>
+
 </body>
 </html>

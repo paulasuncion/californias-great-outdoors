@@ -48,7 +48,7 @@ header {
 }
 
 .mtnPage {
-  background: url(https://thumbs.dreamstime.com/b/scenic-view-moraine-lake-mountain-range-sunset-landscape-canadian-rocky-mountains-49666349.jpg);
+  /* background: url(https://thumbs.dreamstime.com/b/scenic-view-moraine-lake-mountain-range-sunset-landscape-canadian-rocky-mountains-49666349.jpg); */
   -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -200,13 +200,84 @@ img {
     height: 30px;
     text-align: center;
   }
- 
-  #parkType {
-    color: black;
-    font-size: 50px;
+
+  .mountainText {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
   }
 
-  #parkLocation {
-    color:#888;
-    font-size: 60px;
+  .viewAllMountains {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
   }
+
+  .parkText {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+  }
+
+  .locationDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  .typeDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .locationSelect, .locationButton, .typeSelect, .typeButton {
+    width: 150px;
+    height: 30px;
+    text-align: center;
+  }
+
+  .viewAllButton {
+    width: 150px;
+    height: 30px;
+  }
+
+  .viewAllParks {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  .park {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    margin-right: 200px;
+    margin-left: 200px;
+    margin-top: 50px;
+    text-align: center;
+
+  }
+  .parkLocationID {
+    margin-top: 20px;
+  }
+
+  #mountainVideo, #parkVideo, #homeVideo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+ 
+
+
+  
