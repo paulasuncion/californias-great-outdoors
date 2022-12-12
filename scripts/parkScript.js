@@ -1,4 +1,4 @@
-//Calling all functions
+//Calling all functions & loading function data
 window.onload = function LoadData() {
 
     initStatesDropdown();
