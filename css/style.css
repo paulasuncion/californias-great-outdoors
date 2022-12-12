@@ -39,7 +39,7 @@ header {
 }
 
 .homePage {
-  background: url(https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg) no-repeat center center fixed; 
+  /* background: url(https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg) no-repeat center center fixed;  */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -57,7 +57,7 @@ header {
 }
 
 .parkPage {
-  background: url(https://media.cntraveler.com/photos/5f4d76dd7542911efadbef61/master/pass/Yosemite-GettyImages-164289875.jpg);
+  /* background: url(https://media.cntraveler.com/photos/5f4d76dd7542911efadbef61/master/pass/Yosemite-GettyImages-164289875.jpg); */
   -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
